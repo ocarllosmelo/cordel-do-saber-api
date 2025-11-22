@@ -3,11 +3,12 @@ package br.com.cordeldosaber.catalog.dto;
 import br.com.cordeldosaber.catalog.model.Livro;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
-import jakarta.validation.constraints.NotBlank; // Importante: jakarta, não javax
+import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Positive;
 import jakarta.validation.constraints.Size;
 import java.math.BigDecimal;
+
+//Obs.: os comentários nos códigos são para fixar o conteúdo.
 
 @Data
 @NoArgsConstructor
@@ -15,7 +16,7 @@ public class LivroDTO {
 
     private Long id;
 
-    @NotBlank(message = "O título é obrigatório") // Não pode ser nulo nem vazio
+    @NotBlank(message = "O título é obrigatório") // Não pode ser nulo nem vazio.
     @Size(min = 2, max = 100, message = "O título deve ter entre 2 e 100 caracteres")
     private String titulo;
 
@@ -25,10 +26,10 @@ public class LivroDTO {
     @NotBlank(message = "O ISBN é obrigatório")
     private String isbn;
 
-    @Positive(message = "O preço deve ser um valor positivo") // Deve ser > 0
+    @Positive(message = "O preço deve ser um valor positivo") // Deve ser > 0.
     private BigDecimal preco;
 
-    // (Mantenha o construtor de cópia que já existia aqui embaixo...)
+    // Construtor de cópia que já existia.
     public LivroDTO(Livro entidade) {
         this.id = entidade.getId();
         this.titulo = entidade.getTitulo();
