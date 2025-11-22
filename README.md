@@ -71,5 +71,5 @@ A API está blindada contra dados inconsistentes:
 
 Desenvolvido por **Carlos Melo**.
 
-* [LinkedIn](www.linkedin.com/in/carlos-alberto-2a35932bb)
+* [LinkedIn](https://www.linkedin.com/in/carlos-alberto-2a35932bb)
 * [GitHub](https://github.com/ocarllosmelo)
